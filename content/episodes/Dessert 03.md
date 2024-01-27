@@ -5,7 +5,7 @@ guid: "http://breadcrumbsfm.com/?name=breadcrumbs-dessert03.mp3"
 date: "Fri, 14 Jul 2017 08:00:00 -0400"
 summary: "In this third dessert episode, Elias and Sean get frustrated playing Dumb Ways to Die."
 duration: "12:52"
-length: 
+length: 12351538
 file: "https://media.breadcrumbs.fm/breadcrumbs-dessert03.mp3"
 permalink: /dessert/03/
 ---

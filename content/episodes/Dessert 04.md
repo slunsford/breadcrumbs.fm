@@ -5,7 +5,7 @@ guid: "http://breadcrumbsfm.com/?name=breadcrumbs-dessert04.mp3"
 date: "Fri, 01 Sep 2017 11:42:00 -0400"
 summary: "Elias flings birds at pigs for the first time."
 duration: "37:45"
-length: 
+length: 36235605
 file: "https://media.breadcrumbs.fm/breadcrumbs-dessert04.mp3"
 permalink: /dessert/04/
 ---

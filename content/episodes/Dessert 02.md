@@ -5,7 +5,7 @@ guid: "http://breadcrumbsfm.com/?name=breadcrumbs-dessert02.mp3"
 date: "Fri, 26 May 2017 06:56:00 -0400"
 summary: "In this second dessert episode, Sean teaches Elias to play Mini Metro."
 duration: "37:23"
-length: 
+length: 26919984
 file: "https://media.breadcrumbs.fm/breadcrumbs-dessert02.mp3"
 permalink: /dessert/02/
 ---
