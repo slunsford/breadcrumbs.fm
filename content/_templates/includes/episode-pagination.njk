@@ -1,13 +1,13 @@
-{%- if collections.posts %}
-{%- set previousPost = collections.posts | getPreviousCollectionItem %}
-{%- set nextPost = collections.posts | getNextCollectionItem %}
-{%- if nextPost or previousPost %}
+{%- if collections.episodes %}
+{%- set previousEpisode = collections.episodes | getPreviousCollectionItem %}
+{%- set nextEpisode = collections.episodes | getNextCollectionItem %}
+{%- if nextEpisode or previousEpisode %}
 <nav class="pagination" role="navigation">
-    {%- if previousPost %}
-    <a class="prev-post" href="{{ previousPost.url }}">&lt;-: {% if previousPost.data.title %}{{ previousPost.data.title }}{% else %}Previous{% endif %} :-&lt;</a>
+    {%- if previousEpisode %}
+    <a class="prev-episode" href="{{ previousEpisode.url }}">← {% if previousEpisode.data.title %}{{ previousEpisode.data.title }}{% else %}Previous{% endif %}</a>
     {% endif %}
-    {%- if nextPost %}
-    <a class="next-post" href="{{ nextPost.url }}">&gt;-: {%if nextPost.data.title %}{{ nextPost.data.title }}{% else %}Next{% endif %} :-&gt;</a>
+    {%- if nextEpisode %}
+    <a class="next-episode" href="{{ nextEpisode.url }}">{%if nextEpisode.data.title %}{{ nextEpisode.data.title }}{% else %}Next{% endif %} →</a>
     {% endif %}
 </nav>
 {%- endif %}

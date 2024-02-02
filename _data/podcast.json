@@ -13,5 +13,6 @@
   "episode": {
     "defaultDescription": "The latest episode of Ruminate."
   },
-  "image": "https://media.breadcrumbs.fm/breadcrumbs.png"
+  "image": "https://media.breadcrumbs.fm/breadcrumbs.png",
+  "smallImage": "https://media.breadcrumbs.fm/breadcrumbs-500.png"
 }

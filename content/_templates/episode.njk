@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-permalink: "/{{ episodeNumber }}/"
+permalink: "/{{ episodeNumber | slugify }}/"
 ---
 
 {% include "includes/episode-content.njk" %}

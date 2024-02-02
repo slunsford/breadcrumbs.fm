@@ -17,6 +17,8 @@ module.exports = function(eleventyConfig) {
         
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
     
+    // Filters
+    
     // https://www.marclittlemore.com/create-an-eleventy-podcast-feed/
     // RSS
     eleventyConfig.addFilter('rfc822Date', (dateValue) => {
@@ -27,11 +29,19 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter('xmlEscape', (value) => {
         return escape(value);
     });
+    
+    // Newest date in the collection
+    eleventyConfig.addFilter('collectionLastUpdatedDate', (collection) => {
+        const date = Math.max(...collection.map((item) => {
+            return new Date(item.data.published).getTime()
+        }))
 
-    // Filters
+        return rfc822Date(new Date(date))
+    });
+
     eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
         // Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
-        return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "EEEE, d LLLL yyyy");
+        return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "d LLLL yyyy");
     });
     
     eleventyConfig.addFilter('htmlDateString', (dateObj) => {

@@ -1,19 +1,13 @@
 <article class="post{% if link %} link-post{% endif %}">
     <header class="episode-header">
-        {% if featured_image -%}
-        <img src="{{ featured_image }}" alt="{{ featured_image_alt }}" />
-        {%- endif %}
-        <h1 class="episode-title">
-            {%- if link -%}
-            <a href="{{ link }}">{{ title }} <i class="fa-solid fa-square-arrow-up-right link-arrow"></i></a>
-            {%- else -%}
-            {{ title }}
-            {%- endif -%}
-        </h1>
+        <h1 class="episode-title">{{ title }}</h1>
         <section class="episode-meta">
             <time class="episode-date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
         </section>
     </header>
+    <audio controls>
+        <source src="{{ episode.data.file }}" type="audio/mpeg">
+    </audio>
     <section class="episode-content">
         {{ content | safe }}
     </section>
