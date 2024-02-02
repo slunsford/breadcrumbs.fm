@@ -6,9 +6,7 @@
         <title>{% if title %}{{ title }} |&nbsp;{% endif %}{{ podcast.title }}</title>
         <meta name="description" content="{{ description or podcast.description }}">
 
-        {#- Atom and JSON feeds included by default #}
-        <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ podcast.title }}">
-        <link rel="alternate" href="/feed.json" type="application/json" title="{{ podcast.title }}">
+        <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="{{ podcast.title }} RSS">
         
         {# Favicons/Apple touch icons #}
         <link rel="shortcut icon" href="assets/img/favicons/favicon.ico" />
@@ -38,6 +36,7 @@
                 <li><a href="/" class="home-link">Home</a></li>
                 <li><a href="/about/">About</a></li>
                 <li><a href="/archive/">Archive</a></li>
+                <li><a href="/feed.xml">RSS</a></li>
             </ul>
         </header>
         <main id="skip" class="content" role="main">
