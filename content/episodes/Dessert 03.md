@@ -2,12 +2,11 @@
 episodeNumber: Dessert 03
 title: "Dessert 03: Dumb Ways to Die"
 guid: "http://breadcrumbsfm.com/?name=breadcrumbs-dessert03.mp3"
-date: "Fri, 14 Jul 2017 08:00:00 -0400"
 summary: "In this third dessert episode, Elias and Sean get frustrated playing Dumb Ways to Die."
 duration: "12:52"
+date: 2017-07-14T15:00:00+03:00
 length: 12351538
 file: "https://media.breadcrumbs.fm/breadcrumbs-dessert03.mp3"
-permalink: /dessert/03/
 ---
 In this third dessert episode, Elias and Sean get frustrated playing Dumb Ways to Die.
 

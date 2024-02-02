@@ -2,12 +2,11 @@
 episodeNumber: Dessert 04
 title: "Dessert 04: Angry Birds"
 guid: "http://breadcrumbsfm.com/?name=breadcrumbs-dessert04.mp3"
-date: "Fri, 01 Sep 2017 11:42:00 -0400"
 summary: "Elias flings birds at pigs for the first time."
 duration: "37:45"
+date: 2017-09-01T18:42:00+03:00
 length: 36235605
 file: "https://media.breadcrumbs.fm/breadcrumbs-dessert04.mp3"
-permalink: /dessert/04/
 ---
 Elias flings birds at pigs for the first time.
 

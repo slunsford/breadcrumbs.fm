@@ -2,12 +2,11 @@
 episodeNumber: Dessert 01
 title: "Dessert 01: Alto's Adventure"
 guid: "http://breadcrumbsfm.com/?name=breadcrumbs-dessert01.mp3"
-date: "Fri, 07 Apr 2017 15:30:00 -0400"
 summary: "Less substantial than a normal episode, but maybe sweeter, this is the first &quot;Dessert&quot; episode of Breadcrumbs, in which Elias and Sean somehow turn Alto's Adventure into a competitive game."
 duration: "25:10"
+date: 2017-04-07T22:30:00+03:00
 length: 18115056
 file: "https://media.breadcrumbs.fm/breadcrumbs-dessert01.mp3"
-permalink: /dessert/01/
 ---
 Less substantial than a normal episode, but maybe sweeter, this is the first "Dessert" episode of Breadcrumbs, in which Elias and Sean somehow turn Alto's Adventure into a competitive game.
 
