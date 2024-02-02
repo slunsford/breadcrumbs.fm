@@ -1,0 +1,9 @@
+{% if pagination.pageNumber > 0 %}
+{% include "includes/episode-loop-pagination.njk" %}
+{% endif %}
+
+{% for episode in episodes %}
+	{% include "includes/episode-loop-item.njk" %}
+{% endfor %}
+
+{% include "includes/episode-loop-pagination.njk" %}

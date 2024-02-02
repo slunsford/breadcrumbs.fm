@@ -29,5 +29,6 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@netlify/plugin-lighthouse": "^4.0.7",
     "luxon": "^3.2.1",
+    "rfc822-date": "^0.0.3"
   }
 }

@@ -1,5 +1,46 @@
-{% include "includes/header.njk" %}
+<!doctype html>
+<html lang="{{ podcast.language }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% if title %}{{ title }} |&nbsp;{% endif %}{{ podcast.title }}</title>
+        <meta name="description" content="{{ description or podcast.description }}">
+
+        {#- Atom and JSON feeds included by default #}
+        <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ podcast.title }}">
+        <link rel="alternate" href="/feed.json" type="application/json" title="{{ podcast.title }}">
+        
+        {# Favicons/Apple touch icons #}
+        <link rel="shortcut icon" href="assets/img/favicons/favicon.ico" />
+        <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="assets/img/favicons/favicon.ico">
+        <link rel="icon" sizes="32x32" href="assets/img/favicons/favicon-32.png" >
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/favicon-57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/favicon-72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/favicon-114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/favicon-120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/favicon-144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/favicon-152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/favicon-180.png">
+        <link rel="apple-touch-icon" sizes="192x192" href="assets/img/favicons/favicon-192.png">
+        
+        {# Font Awesome icons #}
+        <script src="https://kit.fontawesome.com/8be7adf8bc.js" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+
+        <meta name="generator" content="{{ eleventy.generator }}">
+    </head>
+    <body>
+        <a href="#skip" class="visually-hidden">Skip to main content</a>
+
+        <header class="main">
+            <section class="site-title"><a href="/" class="home-link">{{ podcast.title }}</a></section>
+        </header>
         <main id="skip" class="content" role="main">
             {{ content | safe }}
         </main>
-{% include "includes/footer.njk" %}
+    	<footer class="main">
+        	<section class="copyright">&copy; 2016–2021 Elias Lanz & Sean Lunsford</section>
+    	</footer>
+    </body>
+</html>

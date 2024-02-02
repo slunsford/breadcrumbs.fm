@@ -1,0 +1,23 @@
+<article class="post episode-loop-item{% if post.data.link %} link-post{% endif %}">
+    <header class="episode-header">
+        {% if post.data.featured_image -%}
+        <img src="{{ post.data.featured_image }}" alt="{{ post.data.featured_image_alt }}" />
+        {%- endif %}
+        <h1 class="episode-title">
+          {%- if post.data.link -%}
+            <a href="{{ post.data.link }}">{{ post.data.title }} <i class="fa-solid fa-square-arrow-up-right link-arrow"></i></a>
+          {%- else -%}
+            <a href="{{ post.url }}">{{ post.data.title }}</a>
+          {%- endif -%}
+        </h1>
+        <section class="episode-meta">
+            <time class="episode-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+            {% if post.data.link -%}
+            <a href="{{ post.url }}" class="permalink"><i class="fa-solid fa-link"></i></a>
+            {%- endif %}
+        </section>
+    </header>
+    <section class="episode-content">
+        {{ post.content | safe }}
+    </section>
+</article>

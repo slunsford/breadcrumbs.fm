@@ -1,0 +1,14 @@
+{%- if collections.posts %}
+{%- set previousPost = collections.posts | getPreviousCollectionItem %}
+{%- set nextPost = collections.posts | getNextCollectionItem %}
+{%- if nextPost or previousPost %}
+<nav class="pagination" role="navigation">
+    {%- if previousPost %}
+    <a class="prev-post" href="{{ previousPost.url }}">&lt;-: {% if previousPost.data.title %}{{ previousPost.data.title }}{% else %}Previous{% endif %} :-&lt;</a>
+    {% endif %}
+    {%- if nextPost %}
+    <a class="next-post" href="{{ nextPost.url }}">&gt;-: {%if nextPost.data.title %}{{ nextPost.data.title }}{% else %}Next{% endif %} :-&gt;</a>
+    {% endif %}
+</nav>
+{%- endif %}
+{%- endif %}

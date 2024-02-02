@@ -1,0 +1,12 @@
+---
+layout: base.njk
+pageID: home
+pagination:
+  data: collections.episodes
+  size: 5
+  reverse: true
+  alias: episodes
+permalink: "{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}{% endif %}/"
+---
+
+{% include "includes/episode-loop.njk" %}

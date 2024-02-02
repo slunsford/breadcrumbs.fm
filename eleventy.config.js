@@ -1,6 +1,6 @@
 const { DateTime } = require("luxon");
 
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const rfc822Date = require('rfc822-date');
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
@@ -12,14 +12,21 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "public": "/" });
     
     // Official plugins
-    eleventyConfig.addPlugin(pluginRss);
-    eleventyConfig.addPlugin(pluginSyntaxHighlight, {
-        preAttributes: { tabindex: 0 }
-    });
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
     eleventyConfig.addPlugin(pluginBundle);
         
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+    
+    // https://www.marclittlemore.com/create-an-eleventy-podcast-feed/
+    // RSS
+    eleventyConfig.addFilter('rfc822Date', (dateValue) => {
+        return rfc822Date(dateValue);
+    });
+
+    // Escape characters for XML feed
+    eleventyConfig.addFilter('xmlEscape', (value) => {
+        return escape(value);
+    });
 
     // Filters
     eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
