@@ -1,0 +1,23 @@
+.episode-list {
+  list-style: none;
+  padding: 0;
+  
+  li {
+    align-items: baseline;
+    counter-increment: start-from -1;
+    margin-bottom: 0.5rem;    
+  }
+  
+  .episode-title {
+    font-weight: 600;
+    
+    .episode-number {
+      font-weight: 300;
+      color: var(--secondary-text-color);
+      
+      a:hover & {
+        color: var(--link-color);
+      }
+    }
+  }
+}

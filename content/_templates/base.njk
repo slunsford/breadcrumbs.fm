@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% if title %}{{ title }} |&nbsp;{% endif %}{{ podcast.title }}</title>
+        <title>{% if titleWithEpisode or title %}{{ titleWithEpisode or title }} |&nbsp;{% endif %}{{ podcast.title }}</title>
         <meta name="description" content="{{ description or podcast.description }}">
 
         <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="{{ podcast.title }} RSS">
@@ -23,6 +23,9 @@
         <script src="https://kit.fontawesome.com/8be7adf8bc.js" crossorigin="anonymous"></script>
         
         <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+        <style>
+        {% include "includes/podcast-apps-styles.njk" %}
+        </style>
 
         <meta name="generator" content="{{ eleventy.generator }}">
     </head>
@@ -30,14 +33,16 @@
         <a href="#skip" class="visually-hidden">Skip to main content</a>
 
         <header class="main">
-            <img src="{{ podcast.smallImage }}" alt="Breadcrumbs artwork"/>
-            <section class="site-title"><a href="/" class="home-link">{{ podcast.title }}</a></section>
-            <ul class="nav">
-                <li><a href="/" class="home-link">Home</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/archive/">Archive</a></li>
-                <li><a href="/feed.xml">RSS</a></li>
-            </ul>
+            <section class="flex-container">
+                <a href="/" class="home-link">
+                    <img src="/assets/img/pretzel.png" class="cover" alt="Breadcrumbs pretzel"/>
+                </a>
+                <section class="content">
+                    <section class="site-title"><a href="/" class="home-link">{{ podcast.title }}</a></section>
+                    {% include "includes/podcast-apps.njk" %}
+                    {% include "includes/navigation.njk" %}
+                </section>
+            </section>
         </header>
         <main id="skip" class="content" role="main">
             {{ content | safe }}

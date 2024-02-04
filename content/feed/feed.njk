@@ -31,20 +31,25 @@ permalink: "/feed.xml"
     {%- for episode in collections.episodes %}
         <item>
             <guid isPermaLink="false">{{ episode.data.guid }}</guid>
-            <title>{{ episode.data.title | xmlEscape }}</title>
-            <description><![CDATA[ {{ episode.templateContent | safe }} ]]></description>
-            <pubDate>{{ episode.data.published }}</pubDate>
+            <title>{{ episode.data.titleWithEpisode }}</title>
+            <description><![CDATA[ <p>{{ episode.data.summary }}</p> <p><strong>Links and Show Notes</strong></p> {{ episode.templateContent | safe }} ]]></description>
+            <pubDate>{{ episode.data.date | feedDate }}</pubDate>
             <author>{{ podcast.author }}</author>
             <link>{{ podcast.url}}{{ episode.url }}</link>
-            <content:encoded><![CDATA[ {{ episode.templateContent | safe }} ]]></content:encoded>
-            <enclosure length="{{ episode.data.length }}" type="audio/mpeg" url="https://op3.dev/e,pg=375cd521-835a-5bd1-b747-1fed411c228b/{{ episode.data.file }}"/>
+            <content:encoded><![CDATA[ <p>{{ episode.data.summary }}</p> <p><strong>Links and Show Notes</strong></p> {{ episode.templateContent | safe }} ]]></content:encoded>
+            <enclosure length="{{ episode.data.length }}" type="audio/mpeg" url="{{ episode.data.op3link }}"/>
+            {%if episode.data.episodeNumber %}<itunes:episode>{{ episode.data.episodeNumber }}</itunes:episode>{% endif %}
             <itunes:title>{{ episode.data.title }}</itunes:title>
             <itunes:author>{{ podcast.author }}</itunes:author>
             <itunes:duration>{{ episode.data.duration }}</itunes:duration>
             <itunes:summary>{{ episode.data.summary }}</itunes:summary>
             <itunes:subtitle>{{ episode.data.summary }}</itunes:subtitle>
             <itunes:explicit>no</itunes:explicit>
-            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:episodeType>
+              {%- if episode.data.bonus -%}bonus
+              {%- else -%}full
+              {%- endif -%}
+            </itunes:episodeType>
         </item>
     {% endfor %}
   </channel>

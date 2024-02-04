@@ -1,0 +1,12 @@
+/* @import "_reset.css"; */ /* https://piccalil.li/blog/a-more-modern-css-reset/ */
+@import "_variables.css";
+@import "_base.css";
+
+@import "_header.css";
+@import "_nav.css";
+@import "_footer.css";
+@import "_pagination.css";
+@import "_episode.css";
+@import "_episode_list.css";
+
+@import "_404.css";

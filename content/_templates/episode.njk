@@ -1,6 +1,9 @@
 ---
 layout: base.njk
-permalink: "/{{ episodeNumber | slugify }}/"
+permalink: "/{{ slug or episodeNumber }}/"
+eleventyComputed:
+  titleWithEpisode: "{%if episodeNumber %}{{ episodeNumber }}: {% endif %}{{ title }}"
+  op3link: "https://op3.dev/e/{{ file }}"
 ---
 
 {% include "includes/episode-content.njk" %}

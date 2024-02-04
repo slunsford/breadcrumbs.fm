@@ -8,7 +8,7 @@
     "name": "Sean Lunsford",
     "email": "sean@breadcrumbs.fm"
   },
-	"url": "https://breadcrumbs.fm/",
+	"url": "https://breadcrumbs.fm",
   "feedPath": "https://breadcrumbs.fm/feed.xml",
   "episode": {
     "defaultDescription": "The latest episode of Ruminate."

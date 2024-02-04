@@ -1,0 +1,192 @@
+html {
+  height: 100%;
+  max-height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+body {
+  font-feature-settings: var(--default-font-features);
+  font-variant-ligatures: contextual;
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  font-family: var(--sans);
+  font-style: normal;
+  font-weight: 300;
+  color: var(--main-text-color);
+  background-color: var(--background-color);
+}
+
+main {
+  width: var(--content-width);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1.25rem 0 0.5rem;
+  font-family: var(--sans);
+  font-style: normal;
+}
+
+h1 {
+  font-size: var(--font-size-plus-4);
+  font-weight: 900;
+}
+
+.page-title {
+  font-size: var(--font-size-plus-6);
+}
+
+h2 {
+  font-size: var(--font-size-plus-3);
+  font-weight: 100;
+}
+
+h3 {
+  font-size: var(--font-size-plus-1);
+  font-weight: 800;
+}
+
+h1 b,
+h1 strong,
+h2 b,
+h2 strong {
+  font-weight: 900;
+}
+
+h3 b,
+h3 strong {
+  font-weight: 700;
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 0.75rem;
+  line-height: 1.45;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  text-wrap: pretty;
+  hanging-punctuation: first;
+  font-family: var(--sans-text);
+}
+
+code,
+tt,
+pre {
+  font-family: var(--mono);
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font-size-minus-1);
+  white-space: pre-wrap;
+  border: none;
+  background: none;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+
+pre {
+  margin: 0.75rem;
+  padding: 0.75rem;
+  background: var(--background-color);
+  border: 1px solid var(--post-border-color);
+  border-radius: 5px;
+  font-size: var(--font-size-minus-2);
+}
+
+code b,
+pre b {
+  font-weight: 700;
+}
+
+/* :not(pre) > code {
+  padding: 2px 4px;
+  background: var(--background-color);
+  border: 1px solid var(--post-border-color);
+  border-radius: 5px;
+} */
+
+acronym, .small-caps {
+  font-feature-settings: var(--all-small-caps);
+  letter-spacing: 1px;
+}
+
+blockquote {
+  margin: 0 0.75rem 0.75rem;
+  padding: 0 0.75rem;
+  border-left: 3px solid var(--link-color);
+  font-size: var(--font-size-minus-1);
+  line-height: 1.45;
+}
+
+blockquote p {
+  margin: 0.5rem 0;
+}
+
+blockquote code {
+  padding: 0 2px;
+}
+
+cite {
+  color: var(--secondary-text-color);
+  font-size: var(--font-size-minus-2);
+  font-style: normal;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: var(--secondary-text-color) 1px solid;
+}
+
+kbd {
+  margin: 0px 0.1em;
+  padding: 0.1em 0.6em;
+  border-radius: 3px;
+  color: white;
+  font-family: system-ui, sans-serif;
+  font-size: var(--font-size-minus-3);
+  font-style: normal;
+  font-weight: 500;
+  display: inline-block;
+  background-color: black;
+  box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.3);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: solid 1px var(--link-color);
+}
+

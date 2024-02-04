@@ -4,10 +4,10 @@
 {%- if nextEpisode or previousEpisode %}
 <nav class="pagination" role="navigation">
     {%- if previousEpisode %}
-    <a class="prev-episode" href="{{ previousEpisode.url }}">← {% if previousEpisode.data.title %}{{ previousEpisode.data.title }}{% else %}Previous{% endif %}</a>
+    <a class="prev" href="{{ previousEpisode.url }}">&larr;&nbsp;{% if previousEpisode.data.title %}{{ previousEpisode.data.title }}{% else %}Previous{% endif %}</a>
     {% endif %}
     {%- if nextEpisode %}
-    <a class="next-episode" href="{{ nextEpisode.url }}">{%if nextEpisode.data.title %}{{ nextEpisode.data.title }}{% else %}Next{% endif %} →</a>
+    <a class="next" href="{{ nextEpisode.url }}">{%if nextEpisode.data.title %}{{ nextEpisode.data.title }}{% else %}Next{% endif %}&nbsp;&rarr;</a>
     {% endif %}
 </nav>
 {%- endif %}

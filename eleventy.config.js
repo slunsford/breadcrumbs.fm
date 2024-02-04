@@ -2,6 +2,7 @@ const { DateTime } = require("luxon");
 
 const rfc822Date = require('rfc822-date');
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
+const pluginNavigation = require("@11ty/eleventy-navigation");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function(eleventyConfig) {
@@ -12,6 +13,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "public": "/" });
     
     // Official plugins
+    eleventyConfig.addPlugin(pluginNavigation);
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
     eleventyConfig.addPlugin(pluginBundle);
         
@@ -33,7 +35,7 @@ module.exports = function(eleventyConfig) {
     // Newest date in the collection
     eleventyConfig.addFilter('collectionLastUpdatedDate', (collection) => {
         const date = Math.max(...collection.map((item) => {
-            return new Date(item.data.published).getTime()
+            return new Date(item.data.date).getTime()
         }))
 
         return rfc822Date(new Date(date))
@@ -42,6 +44,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
         // Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
         return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "d LLLL yyyy");
+    });
+    
+    eleventyConfig.addFilter("feedDate", (dateObj, format, zone) => {
+        return DateTime.fromJSDate(dateObj).toFormat(format || "EEE, d MMM yyyy HH:mm:ss ZZZ");
     });
     
     eleventyConfig.addFilter('htmlDateString', (dateObj) => {

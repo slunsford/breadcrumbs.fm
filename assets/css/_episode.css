@@ -1,0 +1,54 @@
+.episode {
+  word-break: break-word;
+  font-family: var(--sans);
+  font-style: normal;
+  
+  .episode-title {
+    margin-bottom: 0;
+    font-size: var(--font-size-plus-5);
+    
+    .episode-number {
+      color: var(--secondary-text-color);
+      font-size: var(--font-size-plus-3);
+      font-weight: 200;
+    }
+    
+    a {
+      color: inherit;
+    }
+    
+    a:hover,
+    a:hover .episode-number {
+      color: var(--link-color) !important;
+    }
+    
+    .episode-loop-item & {
+      font-size: var(--font-size-plus-3);
+      
+      .episode-number {
+        font-size: var(--font-size-plus-1);
+      }
+    }
+  }
+  
+  audio {
+    width: 100%;
+  }
+}
+
+.episode-meta {
+  font-family: var(--sans-text);
+  margin: 0.25rem 0 0.5rem;
+  font-size: var(--font-size-minus-1);
+  color: var(--secondary-text-color);
+  font-weight: 300;
+  
+  a {
+    color: inherit;
+  }
+  
+  a:hover {
+    color: var(--link-color);
+  }
+}
+

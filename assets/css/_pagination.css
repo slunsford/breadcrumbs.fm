@@ -1,0 +1,36 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem;
+  margin: 1.25rem auto;
+  font-size: var(--font-size-minus-2);
+  font-weight: 600;
+  color: var(--secondary-text-color);
+}
+
+.pagination a {
+  color: var(--secondary-text-color);
+}
+
+.pagination a:hover {
+  color: var(--link-color);
+  border: none;
+}
+
+.pagination a:active {
+  opacity: 75%;
+}
+
+.extra-pagination {
+  display: none;
+}
+
+.extra-pagination .pagination {
+  width: auto;
+}
+
+/* On page2+ show extra pagination controls at the top of post list */
+.paged .extra-pagination {
+  display: flex;
+}

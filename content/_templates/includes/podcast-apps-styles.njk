@@ -1,0 +1,8 @@
+    {%- for app in podcastApps -%}
+        {%- if  app.color %}
+            .nav-{{ app.key }} a:hover {
+                color: {{ app.color }};
+                border-color: {{ app.color }};
+            }
+        {% endif -%}
+    {%- endfor -%}

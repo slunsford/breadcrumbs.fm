@@ -1,16 +1,18 @@
 <article class="episode episode-loop-item">
     <header class="episode-header">
         <h1 class="episode-title">
-            <a href="{{ episode.url }}">{{ episode.data.title }}</a>
+            <a href="{{ episode.url }}"><span class="episode-number">{{ episode.data.episodeNumber }}</span> {{ episode.data.title }}</a>
         </h1>
         <section class="episode-meta">
             <time class="episode-date" datetime="{{ episode.date | htmlDateString }}">{{ episode.date | readableDate }}</time>
+            •
+            <span class="episode-duration">{{ episode.data.duration }}</span>
         </section>
     </header>
     <p class="episode-summary">
         {{ episode.data.summary | safe}}
     </p>
     <audio controls>
-        <source src="{{ episode.data.file }}" type="audio/mpeg">
+        <source src="{{ episode.data.op3link }}" type="audio/mpeg">
     </audio>
 </article>

@@ -1,14 +1,20 @@
-<article class="post{% if link %} link-post{% endif %}">
+<article class="episode">
     <header class="episode-header">
-        <h1 class="episode-title">{{ title }}</h1>
+        <h1 class="episode-title"><span class="episode-number">{{ episodeNumber }}</span> {{ title }}</h1>
         <section class="episode-meta">
-            <time class="episode-date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+            <time class="episode-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+            •
+            <span class="episode-duration">{{ duration }}</span>
         </section>
     </header>
+    <p class="episode-summary">
+        {{ summary | safe }}
+    </p>
     <audio controls>
-        <source src="{{ episode.data.file }}" type="audio/mpeg">
+        <source src="{{ op3link }}" type="audio/mpeg">
     </audio>
     <section class="episode-content">
+        <h2>Links and Show Notes</h2>
         {{ content | safe }}
     </section>
 </article>

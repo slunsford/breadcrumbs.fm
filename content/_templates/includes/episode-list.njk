@@ -1,9 +1,12 @@
 <ol reversed class="episode-list" style="counter-reset: start-from {{ (episodeslistCounter or episodeslist.length) + 1 }}">
 {% for episode in episodes | reverse %}
 	<li>
-	<a href="{{ episode.url }}" class="episode-title">{{ episode.data.title }}</a>
-	<time class="episode-date episode-meta" datetime="{{ episode.date | htmlDateString }}">{{ episode.date | readableDate('d LLLL yyyy') }}</time><br />
-	<span class="episode-summary">{{ episode.data.summary }}</span>
+		<a href="{{ episode.url }}" class="episode-title"><span class="episode-number">{{ episode.data.episodeNumber }}</span> {{ episode.data.title }}</a>
+		<span class="episode-meta">
+			<time class="episode-date episode-meta" datetime="{{ episode.date | htmlDateString }}">{{ episode.date | readableDate('d LLLL yyyy') }}</time>
+			•
+			<span class="episode-duration">{{ episode.data.duration }}</span>
+		</span>
 	</li>
 {% endfor %}
 </ol>
