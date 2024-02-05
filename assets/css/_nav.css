@@ -1,7 +1,6 @@
 .nav {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
   column-gap: 0.75rem;
   row-gap: 0;
   margin: 0;
@@ -9,26 +8,19 @@
   font-size: var(--font-size-minus-1);
   font-weight: 500;
   font-feature-settings: var(--all-small-caps);
-  letter-spacing: 1px;
+  
+  li {
+    margin: 0;
+    display: inline-block;
+  }
 }
 
-.nav li {
-  margin: 0;
-  display: inline-block;
-}
-
-.nav a:not(:hover) {
-  color: var(--secondary-text-color) !important; /* Overridden by inline styles for podcast apps */
-  text-decoration: none;
-    
-}
-
-a.nav-current {
-  color: var(--link-color);
-}
-
-a.nav-home {
-  color: var(--secondary-text-color);
+.nav-item a:not(:hover) {
+  color: var(--secondary-light);
+  
+  .nav-current:not(.nav-home) & {
+    color: var(--link-color);
+  }
 }
 
 @media only screen and (max-width: 570px) {

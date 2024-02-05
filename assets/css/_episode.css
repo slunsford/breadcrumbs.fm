@@ -7,19 +7,13 @@
     margin-bottom: 0;
     font-size: var(--font-size-plus-5);
     
-    .episode-number {
-      color: var(--secondary-text-color);
-      font-size: var(--font-size-plus-3);
-      font-weight: 200;
-    }
     
     a {
       color: inherit;
     }
     
-    a:hover,
-    a:hover .episode-number {
-      color: var(--link-color) !important;
+    a:hover {
+      color: var(--link-color);
     }
     
     .episode-loop-item & {
@@ -36,11 +30,20 @@
   }
 }
 
+.episode-number {
+  color: var(--secondary);
+  font-size: var(--font-size-plus-3);
+  font-weight: 200;
+  
+    a:hover & {
+    color: var(--link-border-color);
+  }
+}
+
 .episode-meta {
-  font-family: var(--sans-text);
   margin: 0.25rem 0 0.5rem;
   font-size: var(--font-size-minus-1);
-  color: var(--secondary-text-color);
+  color: var(--secondary);
   font-weight: 300;
   
   a {

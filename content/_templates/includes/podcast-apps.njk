@@ -2,7 +2,7 @@
     <h2 class="visually-hidden">Podcast Apps</h2>
     <ul class="nav">
     {%- for app in podcastApps %}
-        <li class="nav-item nav-{{ app.key }} podcast-app-link">
+        <li class="nav-item nav-{{ app.key }}">
             <a href="{{ app.url }}">{{ app.name }}</a>
         </li>
     {%- endfor %}

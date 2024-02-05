@@ -6,7 +6,7 @@ footer.main {
     max-width: var(--content-max-width);
     margin: 1rem auto 0;
     padding: 0.75rem 1.5rem;
-    color: var(--secondary-text-color);
+    color: var(--secondary-light);
     font-size: var(--font-size-minus-2);
   }
 }

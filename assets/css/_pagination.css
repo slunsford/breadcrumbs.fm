@@ -6,11 +6,11 @@
   margin: 1.25rem auto;
   font-size: var(--font-size-minus-2);
   font-weight: 600;
-  color: var(--secondary-text-color);
+  color: var(--secondary);
 }
 
 .pagination a {
-  color: var(--secondary-text-color);
+  color: var(--secondary);
 }
 
 .pagination a:hover {

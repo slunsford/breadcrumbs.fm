@@ -12,12 +12,7 @@
     font-weight: 600;
     
     .episode-number {
-      font-weight: 300;
-      color: var(--secondary-text-color);
-      
-      a:hover & {
-        color: var(--link-color);
-      }
+      font-size: var(--font-size-minus-2);
     }
   }
 }

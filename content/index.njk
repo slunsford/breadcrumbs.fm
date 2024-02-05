@@ -7,6 +7,9 @@ pagination:
   reverse: true
   alias: episodes
 permalink: "{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}{% endif %}/"
+eleventyNavigation:
+  key: Home
+  order: 1
 ---
 
 {% include "includes/episode-loop.njk" %}

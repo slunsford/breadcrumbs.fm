@@ -15,7 +15,7 @@ body {
   font-family: var(--sans);
   font-style: normal;
   font-weight: 300;
-  color: var(--main-text-color);
+  color: var(--primary);
   background-color: var(--background-color);
 }
 
@@ -91,7 +91,6 @@ ol {
   hyphens: auto;
   text-wrap: pretty;
   hanging-punctuation: first;
-  font-family: var(--sans-text);
 }
 
 code,
@@ -151,7 +150,7 @@ blockquote code {
 }
 
 cite {
-  color: var(--secondary-text-color);
+  color: var(--secondary);
   font-size: var(--font-size-minus-2);
   font-style: normal;
 }
@@ -160,7 +159,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: var(--secondary-text-color) 1px solid;
+  border-top: var(--secondary) 1px solid;
 }
 
 kbd {
@@ -187,6 +186,6 @@ a {
 }
 
 a:hover {
-  border-bottom: solid 1px var(--link-color);
+  border-bottom: solid 1px var(--link-border-color);
 }
 

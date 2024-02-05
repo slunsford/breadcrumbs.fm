@@ -1,31 +1,26 @@
 :root {
+  /* Colors */
   --background-color: #f4f4f4;
   --header-background-color: black;
-  --main-text-color: #0c1203;
-  --secondary-text-color: #5f676b;
+  --primary: #0c1203;
+  --secondary: #5f676b;
+  --primary-light: #dfe1e2;
+  --secondary-light: #9eabb3;
   --link-color: #1e90ff;
-  
-  --link-highlight-color: rgba(158, 171, 179, 0.2);
-  --link-highlight-border-color: rgba(95, 104, 110, 0.2);
-  --epg-box-highlight: var(--link-color) !important;  /* Eleventy Post Graph highlights */
-  
-  --post-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  --post-border-radius: 0.75rem;
+  --link-border-color: #095aa9;
   
   @media (prefers-color-scheme: dark) {
     --background-color: #1e1f21;
     
-    --main-text-color: #dfe1e2;
-    --secondary-text-color: #9eabb3;
+    --primary: var(--primary-light);
+    --secondary: var(--secondary-light);
   }
   
   --content-width: 80%;
   --content-max-width: 35rem;
 
-  --mono: 'Nimbus Mono PS', 'Courier New', monospace;
   --sans: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
-  --sans-text: var(--sans);
-  --slab: var(--mono);
+  --mono: 'Nimbus Mono PS', 'Courier New', monospace;
 
   --font-size-minus-3: 0.702rem;
   --font-size-minus-2: 0.79rem;
