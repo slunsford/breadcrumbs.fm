@@ -4,5 +4,6 @@ footer.main {
   .content {
     color: var(--secondary-light);
     font-size: var(--font-size-minus-2);
+    font-weight: 400;
   }
 }

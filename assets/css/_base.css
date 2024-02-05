@@ -7,12 +7,11 @@ html {
 }
 
 body {
-  font-feature-settings: var(--default-font-features);
   font-variant-ligatures: contextual;
   height: 100%;
   max-height: 100%;
   margin: 0;
-  background-color: var(--header-background-color);
+  background-color: black;
   font-family: var(--sans);
   font-style: normal;
   font-weight: 300;
