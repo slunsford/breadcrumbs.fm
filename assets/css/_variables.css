@@ -15,9 +15,6 @@
     --primary: var(--primary-light);
     --secondary: var(--secondary-light);
   }
-  
-  --content-width: 80%;
-  --content-max-width: 35rem;
 
   --sans: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
   --mono: 'Nimbus Mono PS', 'Courier New', monospace;

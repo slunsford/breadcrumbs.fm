@@ -12,17 +12,28 @@ body {
   height: 100%;
   max-height: 100%;
   margin: 0;
+  background-color: var(--header-background-color);
   font-family: var(--sans);
   font-style: normal;
   font-weight: 300;
   color: var(--primary);
-  background-color: var(--background-color);
 }
 
 main {
-  width: var(--content-width);
-  max-width: var(--content-max-width);
+  background-color: var(--background-color);
+  padding: 1.5rem 0;
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}
+
+.content {
+  max-width: 35rem;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -54,32 +65,35 @@ h6 {
 h1 {
   font-size: var(--font-size-plus-4);
   font-weight: 900;
-}
-
-.page-title {
-  font-size: var(--font-size-plus-6);
+  
+  &:first-child {
+    margin-top: 0;
+  }
+  
+  b,
+  strong {
+    font-weight: 900;
+  }
 }
 
 h2 {
   font-size: var(--font-size-plus-3);
   font-weight: 100;
+  
+  b,
+  strong {
+    font-weight: 400;
+  }
 }
 
 h3 {
   font-size: var(--font-size-plus-1);
   font-weight: 800;
-}
-
-h1 b,
-h1 strong,
-h2 b,
-h2 strong {
-  font-weight: 900;
-}
-
-h3 b,
-h3 strong {
-  font-weight: 700;
+  
+  b,
+  strong {
+    font-weight: 900;
+  }
 }
 
 p,
@@ -105,6 +119,10 @@ pre {
   background: none;
   -webkit-hyphens: none;
   hyphens: none;
+  
+  b {
+    font-weight: 700;
+  }
 }
 
 pre {
@@ -116,37 +134,20 @@ pre {
   font-size: var(--font-size-minus-2);
 }
 
-code b,
-pre b {
-  font-weight: 700;
-}
-
-/* :not(pre) > code {
-  padding: 2px 4px;
-  background: var(--background-color);
-  border: 1px solid var(--post-border-color);
-  border-radius: 5px;
-} */
-
-acronym, .small-caps {
-  font-feature-settings: var(--all-small-caps);
-  letter-spacing: 1px;
-}
-
 blockquote {
   margin: 0 0.75rem 0.75rem;
   padding: 0 0.75rem;
   border-left: 3px solid var(--link-color);
   font-size: var(--font-size-minus-1);
   line-height: 1.45;
-}
-
-blockquote p {
-  margin: 0.5rem 0;
-}
-
-blockquote code {
-  padding: 0 2px;
+  
+  p {
+    margin: 0.5rem 0;
+  }
+  
+  code {
+    padding: 0 2px;
+  }
 }
 
 cite {

@@ -1,13 +1,7 @@
 header.main {
-  margin-bottom: 1.5rem;
-  padding: 1.5rem 0;
-  background-color: var(--header-background-color);
+  padding: 1.5rem 0;  
   
-  
-  .flex-container {
-    width: var(--content-width);
-    max-width: var(--content-max-width);
-    margin: 0 auto;
+  .content {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -19,7 +13,7 @@ header.main {
     height: 100px;
   }
   
-  .content {
+  .title-nav-container {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
@@ -58,7 +52,7 @@ a.home-link:hover {
     font-size: 11vw;
   }
   
-  header.main .flex-container {
+  header.main .content {
     flex-direction: column;
     text-align: center;
   }

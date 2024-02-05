@@ -33,22 +33,26 @@
         <a href="#skip" class="visually-hidden">Skip to main content</a>
 
         <header class="main">
-            <section class="flex-container">
+            <section class="content">
                 <a href="/" class="home-link">
                     <img src="/assets/img/pretzel.png" class="cover" alt="Breadcrumbs pretzel"/>
                 </a>
-                <section class="content">
+                <section class="title-nav-container">
                     <section class="site-title"><a href="/" class="home-link">{{ podcast.title }}</a></section>
                     {% include "includes/podcast-apps.njk" %}
                     {% include "includes/navigation.njk" %}
                 </section>
             </section>
         </header>
-        <main id="skip" class="content" role="main">
-            {{ content | safe }}
+        <main id="skip" role="main">
+            <section class="content">
+                {{ content | safe }}
+            </section>
         </main>
-    	<footer class="main">
-        	<section class="copyright">&copy; 2016–2021 Elias Lanz & Sean Lunsford</section>
-    	</footer>
+        <footer class="main">
+            <section class="content">
+                <span class="copyright">&copy; 2016–2021 Elias Lanz & Sean Lunsford</span>
+            </section>
+        </footer>
     </body>
 </html>
