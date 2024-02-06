@@ -28,7 +28,7 @@ permalink: "/feed.xml"
         <itunes:email>{{ podcast.owner.email }}</itunes:email>
     </itunes:owner>
     <itunes:category text="{{ podcast.category }}"/>
-    {%- for episode in collections.episodes %}
+    {%- for episode in collections.episodes | reverse %}
         <item>
             <guid isPermaLink="false">{{ episode.data.guid }}</guid>
             <title>{{ episode.data.titleWithEpisode }}</title>
