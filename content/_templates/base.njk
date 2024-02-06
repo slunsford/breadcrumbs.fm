@@ -1,18 +1,29 @@
+{%- set pageTitle %}
+    {%- if titleWithEpisode -%}
+        {{ podcast.title }} {{ titleWithEpisode }}
+    {%- elseif title -%}
+        {{ title }} | {{ podcast.title }}
+    {%- else -%}
+        {{ podcast.title }}
+    {%- endif -%}
+{% endset -%}
+
+{%- set pageDescription %}{{ summary or podcast.description }}{% endset -%}
+
 <!doctype html>
 <html lang="{{ podcast.language }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
-            {%- if titleWithEpisode -%}
-                {{ podcast.title }} {{ titleWithEpisode }}
-            {%- elseif title -%}
-                {{ title }} | {{ podcast.title }}
-            {%- else -%}
-                {{ podcast.title }}
-            {%- endif -%}
-        </title>
-        <meta name="description" content="{{ summary or podcast.description }}">
+        <title>{{ pageTitle }}</title>
+        <meta name="description" content="{{ pageDescription }}">
+        
+        <meta property="og:title" content="{{ pageTitle }}" />
+        <meta property="og:description" content="{{ pageDescription }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{ podcast.url }}" />
+        <meta property="og:image" content="{{ podcast.image }}">
+
 
         <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="{{ podcast.title }} Feed">
         
