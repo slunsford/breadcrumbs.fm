@@ -50,7 +50,7 @@ permalink: "/feed.xml"
           {%- else -%}full
           {%- endif -%}
         </itunes:episodeType>
-        {%if episode.data.transcript %}<podcast:transcript url="{{ episode.data.transcript }}" type="text/vtt" />{% endif %}
+         {# {%if episode.data.transcript %}<podcast:transcript url="{{ episode.data.transcript }}" type="text/vtt" />{% endif %} #}
     </item>
     {%- endfor -%}
   </channel>

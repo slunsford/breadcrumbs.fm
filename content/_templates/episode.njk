@@ -3,7 +3,7 @@ layout: base.njk
 permalink: "/{{ slug or episodeNumber }}/"
 eleventyComputed:
   titleWithEpisode: "{%if episodeNumber %}{{ episodeNumber }}: {% endif %}{{ title }}"
-  op3link: "https://op3.dev/e/{{ file }}"
+  op3link: "{{ podcast.fileLocation }}{{ fileName }}"
 ---
 
 {% include "includes/episode-content.njk" %}

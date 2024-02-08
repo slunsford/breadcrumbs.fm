@@ -6,7 +6,7 @@ summary: "In this third dessert episode, Elias and Sean get frustrated playing D
 duration: "12:52"
 date: 2017-07-14T15:00:00+03:00
 length: 12351538
-file: "https://media.breadcrumbs.fm/breadcrumbs-dessert03.mp3"
+fileName: breadcrumbs-dessert03.mp3
 ---
 
 Due to technical issues, Elias's game audio was unusable and Sean's cuts out about halfway through.

@@ -6,7 +6,7 @@ summary: "In this second dessert episode, Sean teaches Elias to play Mini Metro.
 duration: "37:23"
 date: 2017-05-26T13:56:00+03:00
 length: 26919984
-file: "https://media.breadcrumbs.fm/breadcrumbs-dessert02.mp3"
+fileName: breadcrumbs-dessert02.mp3
 ---
 
 PSA: This game is pretty visual in nature and this episode may make a lot more sense if you have played before. If you've never played Mini Metro (or even if you have) you may enjoy playing along with us while you listen.
