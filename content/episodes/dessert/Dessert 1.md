@@ -6,7 +6,7 @@ summary: "Less substantial than a normal episode, but maybe sweeter, this is the
 duration: "25:10"
 date: 2017-04-07T22:30:00+03:00
 length: 18115056
-file: "https://media.breadcrumbs.fm/breadcrumbs-dessert01.mp3"
+fileName: breadcrumbs-dessert01.mp3
 ---
 
 - [ Alto's Adventure](https://itunes.apple.com/us/app/altos-adventure/id950812012?mt=8&uo=4)
