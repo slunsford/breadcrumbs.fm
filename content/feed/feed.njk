@@ -20,7 +20,7 @@ permalink: "/feed.xml"
     <itunes:type>episodic</itunes:type>
     <itunes:summary>{{ podcast.description }}</itunes:summary>
     <itunes:author>{{ podcast.author }}</itunes:author>
-    <itunes:explicit>no</itunes:explicit>
+    <itunes:explicit>false</itunes:explicit>
     <itunes:image href="{{ podcast.image }}"/>
     <atom:link href="{{ podcast.feedPath }}" rel="self"/>
     <itunes:new-feed-url>{{ podcast.feedPath }}</itunes:new-feed-url>
@@ -45,7 +45,7 @@ permalink: "/feed.xml"
         <itunes:duration>{{ episode.data.duration }}</itunes:duration>
         <itunes:summary>{{ episode.data.summary }}</itunes:summary>
         <itunes:subtitle>{{ episode.data.summary }}</itunes:subtitle>
-        <itunes:explicit>no</itunes:explicit>
+        <itunes:explicit>false</itunes:explicit>
         <itunes:episodeType>
           {%- if episode.data.bonus -%}bonus
           {%- else -%}full
