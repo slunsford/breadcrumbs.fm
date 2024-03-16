@@ -10,7 +10,7 @@ permalink: "/feed.xml"
     <copyright>{{ podcast.author }}</copyright>
     <language>{{ podcast.language }}</language>
     <pubDate>{{ collections.episodes | collectionLastUpdatedDate }}</pubDate>
-    <lastBuildDate>{{ collections.episodes | collectionLastUpdatedDate }}</lastBuildDate>
+    <lastBuildDate>{% currentDate %}</lastBuildDate>
     <image>
         <link>{{ podcast.url }}</link>
         <title>{{ podcast.title }}</title>
@@ -34,7 +34,7 @@ permalink: "/feed.xml"
         <guid isPermaLink="false">{{ episode.data.guid }}</guid>
         <title>{{ episode.data.titleWithEpisode }}</title>
         <description><![CDATA[ <p>{{ episode.data.summary }}</p> <p><strong>Links and Show Notes</strong></p> {{ episode.templateContent | safe }} ]]></description>
-        <pubDate>{{ episode.data.date | feedDate }}</pubDate>
+        <pubDate>{{ episode.data.date | rfc822Date }}</pubDate>
         <author>{{ podcast.author }}</author>
         <link>{{ podcast.url}}{{ episode.url }}</link>
         <content:encoded><![CDATA[ <p>{{ episode.data.summary }}</p> <p><strong>Links and Show Notes</strong></p> {{ episode.templateContent | safe }} ]]></content:encoded>

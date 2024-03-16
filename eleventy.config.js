@@ -18,7 +18,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(pluginBundle);
         
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-    
+    eleventyConfig.addShortcode("currentDate", () => {
+        return rfc822Date(new Date())
+    });
+        
     // Filters
     
     // https://www.marclittlemore.com/create-an-eleventy-podcast-feed/
@@ -44,10 +47,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
         // Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
         return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "d LLLL yyyy");
-    });
-    
-    eleventyConfig.addFilter("feedDate", (dateObj, format, zone) => {
-        return DateTime.fromJSDate(dateObj).toFormat(format || "EEE, d MMM yyyy HH:mm:ss ZZZ");
     });
     
     eleventyConfig.addFilter('htmlDateString', (dateObj) => {
