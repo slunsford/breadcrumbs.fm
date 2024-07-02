@@ -1,4 +1,5 @@
 const { DateTime } = require("luxon");
+const yaml = require("js-yaml");
 
 const rfc822Date = require('rfc822-date');
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
@@ -84,6 +85,8 @@ module.exports = function(eleventyConfig) {
         return (tags || []).filter(tag => ["all", "nav", "episodes", "pages"].indexOf(tag) === -1);
     });
     
+    eleventyConfig.addDataExtension("yml, yaml", (contents) => yaml.load(contents));
+
     return {
         // Control which files Eleventy will process
         // e.g.: *.md, *.njk, *.html, *.liquid
