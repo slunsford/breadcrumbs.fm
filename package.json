@@ -28,7 +28,7 @@
     "@11ty/eleventy-plugin-bundle": "^1.0.5",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "lodash": "^4.17.21",
-    "luxon": "^3.4.4",
+    "luxon": "^3.5.0",
     "rfc822-date": "^0.0.3"
   }
 }
