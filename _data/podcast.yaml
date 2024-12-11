@@ -13,5 +13,5 @@ url: 'https://breadcrumbs.fm'
 feedPath: 'https://breadcrumbs.fm/feed.xml'
 episode:
   defaultDescription: The latest episode of Ruminate.
-fileLocation: https://op3.dev/e,pg=d9c36fb5-6802-5726-a5f8-513535b2d15c/media.breadcrumbs.fm/
+fileLocation: https://op3.dev/e,pg=cf7304fb-e880-54ff-91c4-f639c6338f31/media.breadcrumbs.fm/
 image: 'https://media.breadcrumbs.fm/breadcrumbs.png'
