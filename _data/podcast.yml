@@ -11,7 +11,5 @@ owner:
   email: sean@breadcrumbs.fm
 url: 'https://breadcrumbs.fm'
 feedPath: 'https://breadcrumbs.fm/feed.xml'
-episode:
-  defaultDescription: The latest episode of Ruminate.
 fileLocation: https://op3.dev/e,pg=cf7304fb-e880-54ff-91c4-f639c6338f31/media.breadcrumbs.fm/
 image: 'https://media.breadcrumbs.fm/breadcrumbs.png'
