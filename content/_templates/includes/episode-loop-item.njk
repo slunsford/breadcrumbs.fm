@@ -12,7 +12,7 @@
     <p class="episode-summary">
         {{ episode.data.summary | safe}}
     </p>
-    <audio controls>
+    <audio controls preload="none">
         <source src="{{ episode.data.op3link }}" type="audio/mpeg">
     </audio>
 </article>
